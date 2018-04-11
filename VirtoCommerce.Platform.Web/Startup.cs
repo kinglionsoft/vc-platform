@@ -73,6 +73,8 @@ namespace VirtoCommerce.Platform.Web
         public static bool IsApplication { get; private set; }
         public static string VirtualRoot { get; private set; }
 
+        public static string DefaultLanguage { get; private set; }
+
         public void Configuration(IAppBuilder app)
         {
             IsApplication = true;
@@ -81,6 +83,8 @@ namespace VirtoCommerce.Platform.Web
 
         public void Configuration(IAppBuilder app, string virtualRoot, string routePrefix)
         {
+            DefaultLanguage = ConfigurationHelper.GetAppSettingsValue("VirtoCommerce:UI:DefaultLanguage", "en");
+
             VirtualRoot = virtualRoot;
 
             _assembliesPath = HostingEnvironment.MapPath(VirtualRoot + "/App_Data/Modules");
@@ -230,7 +234,7 @@ namespace VirtoCommerce.Platform.Web
                 {
                     Subject = PlatformNotificationResource.RegistrationNotificationSubject,
                     Body = PlatformNotificationResource.RegistrationNotificationBody,
-                    Language = "en-US",
+                    Language = DefaultLanguage,
                 }
             });
 
@@ -242,7 +246,7 @@ namespace VirtoCommerce.Platform.Web
                 {
                     Subject = PlatformNotificationResource.ResetPasswordNotificationSubject,
                     Body = PlatformNotificationResource.ResetPasswordNotificationBody,
-                    Language = "en-US",
+                    Language = DefaultLanguage,
                 }
             });
 
@@ -254,7 +258,7 @@ namespace VirtoCommerce.Platform.Web
                 {
                     Subject = PlatformNotificationResource.TwoFactorNotificationSubject,
                     Body = PlatformNotificationResource.TwoFactorNotificationBody,
-                    Language = "en-US",
+                    Language = DefaultLanguage,
                 }
             });
 
@@ -266,7 +270,7 @@ namespace VirtoCommerce.Platform.Web
                 {
                     Subject = PlatformNotificationResource.TwoFactorNotificationSubject,
                     Body = PlatformNotificationResource.TwoFactorNotificationBody,
-                    Language = "en-US",
+                    Language = DefaultLanguage,
                 }
             });
 
@@ -501,7 +505,7 @@ namespace VirtoCommerce.Platform.Web
                                 ValueType = ModuleSetting.TypeString,
                                 Title = "Language",
                                 Description = "Default language (two letter code from ISO 639-1, case-insensitive). Example: en, de",
-                                DefaultValue = "en"
+                                DefaultValue = DefaultLanguage
                             },
                             new ModuleSetting
                             {
@@ -509,7 +513,7 @@ namespace VirtoCommerce.Platform.Web
                                 ValueType = ModuleSetting.TypeString,
                                 Title = "Regional format",
                                 Description = "Default regional format (CLDR locale code, with dash or underscore as delemiter, case-insensitive). Example: en, en_US, sr_Cyrl, sr_Cyrl_RS",
-                                DefaultValue = "en"
+                                DefaultValue = DefaultLanguage,
                             },
                             new ModuleSetting
                             {

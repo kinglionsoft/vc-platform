@@ -224,7 +224,7 @@ namespace VirtoCommerce.Platform.Data.Settings
         public void RegisterModuleSettings(string moduleId, params SettingEntry[] settings)
         {
             //check module exist
-            if (!GetModules().Any(x => x.Id == moduleId))
+            if (GetModules().All(x => x.Id != moduleId))
             {
                 throw new ArgumentException(moduleId + " not exist");
             }

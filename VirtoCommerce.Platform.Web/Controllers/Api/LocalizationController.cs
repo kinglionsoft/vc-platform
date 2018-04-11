@@ -35,7 +35,7 @@ namespace VirtoCommerce.Platform.Web.Controllers.Api
         [ResponseType(typeof(object))] // Produces invalid response type in generated client
         [AllowAnonymous]
         [ApiExplorerSettings(IgnoreApi = true)]
-        public JObject GetLocalization(string lang = "en")
+        public JObject GetLocalization(string lang = "zh-CN")
         {
             var searchPattern = string.Format("{0}.*{1}", lang, LocalizationFilesFormat);
             var files = GetAllLocalizationFiles(searchPattern, LocalizationFilesFolder);

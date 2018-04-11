@@ -1,6 +1,6 @@
 ﻿angular.module('platformWebApp')
-.constant("platformWebApp.fallbackLanguage", "en")
-.constant("platformWebApp.fallbackRegionalFormat", "en")
+.constant("platformWebApp.fallbackLanguage", "zh-cn")
+.constant("platformWebApp.fallbackRegionalFormat", "zh-cn")
 .constant("platformWebApp.fallbackTimeZone", "Etc/Utc")
 .constant("platformWebApp.fallbackTimeAgoSettings", { useTimeAgo: true, thresholdUnit: 'Never', threshold: null })
 .constant("platformWebApp.fallbackTimeFormat", { showMeridian: true})

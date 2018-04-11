@@ -515,6 +515,28 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Cache.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Cart.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Catalog.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.CatalogPublishing.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Common.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Content.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Core.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Customer.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Inventory.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Licensing.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Marketing.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Orders.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Platform.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Pricing.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.ProductRecommendations.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Quote.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Search.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Sitemaps.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Store.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Subscription.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerce.Thumbnail.json" />
+    <Content Include="App_Data\Localizations\zh-cn.VirtoCommerceSearchApi.json" />
     <None Include="gulpfile.js" />
     <Content Include="Scripts\allPackages.js" />
     <Content Include="Content\allStyles.css" />
@@ -1167,7 +1189,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Assets\" />
-    <Folder Include="App_Data\Localizations\" />
     <Folder Include="App_Data\Modules\" />
     <Folder Include="Filters\" />
     <Folder Include="Modules\" />
@@ -1177,7 +1198,6 @@
     <Content Include="Content\themes\main\fonts\fontawesome-webfont.woff2" />
     <Content Include="Localizations\en.VirtoCommerce.Platform.json" />
     <Content Include="Localizations\en.VirtoCommerce.Common.json" />
-    <Content Include="Views\Shared\_FacebookTrackerPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VirtoCommerce.Platform.Core.Web\VirtoCommerce.Platform.Core.Web.csproj">
